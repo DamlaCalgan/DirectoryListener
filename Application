@@ -1,0 +1,21 @@
+package com.damla.main;
+
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import com.damla.directoryListener.PathWatch;
+
+public class Application {
+	public static void main(String[] args) {
+		Path dir = Paths.get("c:/test");
+		try {
+			new PathWatch(dir).processEvents();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+
+}
